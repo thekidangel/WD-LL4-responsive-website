@@ -1,0 +1,188 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Libre Baskerville', serif;
+  background-color: #f0f8f5;
+  color: #2f4f4f;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  background-color: #2a6353;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+header:hover {
+  background-color: #337963;
+}
+
+.logo {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo::before {
+  content: '🌿';
+  margin-right: 0.5rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #b3e8dd;
+  transform: scale(1.05);
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background-color: #e6f3f0;
+  transition: background-color 0.3s ease;
+}
+
+.hero:hover {
+  background-color: #d9ece8;
+}
+
+.hero h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+  color: #265c4b;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+  color: #406c5b;
+}
+
+.hero .cta-button {
+  background-color: #2a6353;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.05rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hero .cta-button:hover {
+  background-color: #3e7c68;
+  transform: scale(1.05);
+}
+
+.about {
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.about h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+  color: #2a6353;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  color: #3e5e57;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 0.5rem;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+  }
+
+  .about h2 {
+    font-size: 1.8rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .hero {
+    padding: 6rem 4rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+  }
+
+  .about {
+    padding: 4rem 3rem;
+  }
+
+  .about h2 {
+    font-size: 2.4rem;
+  }
+
+  .about p {
+    font-size: 1.2rem;
+  }
+}
